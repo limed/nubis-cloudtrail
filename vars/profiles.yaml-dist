@@ -1,0 +1,4 @@
+---
+profiles:
+    - profile: profilename1
+    - profile: profilename2

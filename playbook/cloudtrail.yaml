@@ -1,3 +1,15 @@
 ---
 - hosts: localhost
   connection: local
+  gather_facts: False
+
+  vars_files:
+    - '../vars/default.yaml'
+    - '../vars/regions.yaml'
+    - '../vars/profiles.yaml'
+
+  tasks:
+    - name: Deploy cloudtrail on all AWS regions per each profile
+      cloudformation:
+        stack_name: "{{ stack_id }}"
+        state: "{{ state }}"

@@ -1,2 +1,4 @@
 ---
-state: present
+state: 'present'
+stack_id: 'MozillaSecuredCloudTrail'
+bucket_name: 'mozilla-cloudtrail-logs'
