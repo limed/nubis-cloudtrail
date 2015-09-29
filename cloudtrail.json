@@ -1,0 +1,73 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "CloudTrail for the region which sends logs and SNS notification to the Mozilla secured CloudTrail storage account",
+  "Parameters": {
+    "BucketName": {
+      "Type": "String",
+      "Description": "The S3 Bucket name to store CloudTrail logs in"
+    },
+    "SNSAccountId": {
+      "Type": "String",
+      "Default": "",
+      "Description": "The AWS Account ID of the CloudTrail secure storage account"
+    },
+    "SNSRegion": {
+      "Type": "String",
+      "Default": "us-east-1",
+      "Description": "The region that the CloudTrail secure storage account's SNS topic is in"
+    }
+  },
+  "Conditions": {
+    "SNSAccountIdDefined": {
+      "Fn::Not": [
+        {
+          "Fn::Equals": [
+            {
+              "Ref": "SNSAccountId"
+            },
+            ""
+          ]
+        }
+      ]
+    }
+  },
+  "Resources": {
+    "CloudTrail": {
+      "Type": "AWS::CloudTrail::Trail",
+      "Properties": {
+        "S3BucketName": {
+          "Ref": "BucketName"
+        },
+        "SnsTopicName": {
+          "Fn::If": [
+            "SNSAccountIdDefined",
+            {
+              "Fn::Join": [
+                "",
+                [
+                  "arn:aws:sns:",
+                  {
+                    "Ref": "SNSRegion"
+                  },
+                  ":",
+                  {
+                    "Ref": "SNSAccountId"
+                  },
+                  ":MozillaCloudTrailLogs",
+                  {
+                    "Ref": "AWS::AccountId"
+                  }
+                ]
+              ]
+            },
+            {
+              "Ref": "AWS::NoValue"
+            }
+          ]
+        },
+        "IsLogging": true,
+        "IncludeGlobalServiceEvents": false
+      }
+    }
+  }
+}
