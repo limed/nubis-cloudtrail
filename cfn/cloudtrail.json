@@ -69,5 +69,13 @@
         "IncludeGlobalServiceEvents": false
       }
     }
+  },
+  "Output": {
+    "CloudtrailID": {
+      "Description": "Cloudtrail ID",
+      "Value": {
+        "Ref": "CloudTrail"
+      }
+    }
   }
 }
