@@ -13,3 +13,13 @@
       cloudformation:
         stack_name: "{{ stack_id }}"
         state: "{{ state }}"
+        profile: "{{ profile_name }}"
+        template: "cloudtrail.json"
+        region: {{ item.region }}
+        with_items: regions
+        template_parameters:
+          BucketName: {{ bucket_name }}
+      register: stack
+
+    - debug: var=stack.stack_outputs
+
