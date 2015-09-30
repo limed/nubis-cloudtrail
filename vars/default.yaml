@@ -1,4 +1,5 @@
 ---
 state: 'present'
+cfn_templates: '../cfn'
 stack_id: 'MozillaSecuredCloudTrail'
 bucket_name: 'mozilla-cloudtrail-logs'
