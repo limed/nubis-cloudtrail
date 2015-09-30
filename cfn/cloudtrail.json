@@ -70,7 +70,7 @@
       }
     }
   },
-  "Output": {
+  "Outputs": {
     "CloudtrailID": {
       "Description": "Cloudtrail ID",
       "Value": {
