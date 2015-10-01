@@ -17,4 +17,4 @@ If you do not provide a profile name it will just default to the `default` aws p
 
 ##### Notes
 There isn't much that needs configuring for this to work, we statically manage the list of regions that is available to cloudtrail.
-The list is also documented on (amazon's website)[http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-supported-regions.html]
+The list is also documented on [amazon's website](http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-supported-regions.htm)
