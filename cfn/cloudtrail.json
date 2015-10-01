@@ -71,7 +71,7 @@
     }
   },
   "Outputs": {
-    "CloudtrailID": {
+    "CloudTrailID": {
       "Description": "Cloudtrail ID",
       "Value": {
         "Ref": "CloudTrail"
