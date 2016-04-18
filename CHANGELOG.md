@@ -4,7 +4,12 @@
 **Closed issues:**
 
 - Tag  release [\#2](https://github.com/nubisproject/nubis-cloudtrail/issues/2)
+- Tag v1.0.1 release [\#3](https://github.com/nubisproject/nubis-cloudtrail/issues/3)
 - Enable cloudtrail on every aws account [\#1](https://github.com/nubisproject/nubis-cloudtrail/issues/1)
+
+**Merged pull requests:**
+
+- Update CHANGELOG for v1.0.1 release [\#4](https://github.com/nubisproject/nubis-cloudtrail/pull/4) ([tinnightcap](https://github.com/tinnightcap))
 
 
 
