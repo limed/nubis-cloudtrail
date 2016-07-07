@@ -1,5 +1,16 @@
 # Change Log
 
+## [v1.1.0](https://github.com/nubisproject/nubis-cloudtrail/tree/v1.1.0) (2016-04-18)
+[Full Changelog](https://github.com/nubisproject/nubis-cloudtrail/compare/v1.0.1...v1.1.0)
+
+**Closed issues:**
+
+- Tag v1.1.0 release [\#5](https://github.com/nubisproject/nubis-cloudtrail/issues/5)
+
+**Merged pull requests:**
+
+- Update CHANGELOG for v1.1.0 release [\#6](https://github.com/nubisproject/nubis-cloudtrail/pull/6) ([tinnightcap](https://github.com/tinnightcap))
+
 ## [v1.0.1](https://github.com/nubisproject/nubis-cloudtrail/tree/v1.0.1) (2015-11-20)
 **Closed issues:**
 
